@@ -53,7 +53,6 @@ struct TrafficLightViewModelTests {
         #expect(viewModel.debounceTask != nil, "The debouncer task should be started.")
     }
     
-    @MainActor
     @Test
     func testStopDriving() async throws {
         viewModel.userDidTapActionButton() // toggle isDriving var and start task
