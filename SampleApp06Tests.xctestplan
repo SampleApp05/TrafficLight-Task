@@ -1,0 +1,26 @@
+{
+  "configurations" : [
+    {
+      "id" : "1499CD3A-40DC-458B-83D1-AF5D5661A55B",
+      "name" : "Test Scheme Action",
+      "options" : {
+        "nsZombieEnabled" : true,
+        "threadSanitizerEnabled" : true
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SampleApp06.xcodeproj",
+        "identifier" : "8B44B4192D8F142E0045CF67",
+        "name" : "SampleApp06Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
