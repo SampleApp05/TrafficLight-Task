@@ -30,8 +30,8 @@ struct DebouncerTests {
             }
         }
         
-        assert(executionDate != nil, "Execution date should not be nil")
-        assert(executionDate! >= expectedDate, "Execution date should be after the delay")
+        #expect(executionDate != nil, "Execution date should not be nil")
+        #expect(executionDate! >= expectedDate, "Execution date should be after the delay")
     }
     
     @Test("Debouncer should run only the last task")
@@ -49,7 +49,7 @@ struct DebouncerTests {
         
         try await Task.sleep(nanoseconds: 0.5.inNanoSeconds) // Wait for the 2nd task to finish
         
-        assert(firstTaskExecuted == false, "The first task should have been cancelled.")
-        assert(secondTaskExecuted, "The second task should have executed.")
+        #expect(firstTaskExecuted == false, "The first task should have been cancelled.")
+        #expect(secondTaskExecuted, "The second task should have executed.")
     }
 }
